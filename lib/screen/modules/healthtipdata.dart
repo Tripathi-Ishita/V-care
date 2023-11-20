@@ -1,13 +1,19 @@
-class MyData{
+class MyData {
   final String question;
   final String picture;
-  final String answer;
-  MyData({required this.question, required this.picture, required this.answer});
+
+
+  MyData({
+    required this.question,
+    required this.picture,
+
+  });
+
   factory MyData.fromJson(Map<String, dynamic> json) {
     return MyData(
-      question: json['question'],
+      question: json['question'] ,
       picture: json['picture'],
-      answer: json['answer'],
+
     );
   }
 }
