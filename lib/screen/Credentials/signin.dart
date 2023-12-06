@@ -24,7 +24,7 @@ class _SigninState extends State<Signin> with SingleTickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
           height: MediaQuery.of(context).size.height,
@@ -47,6 +47,7 @@ class _SigninState extends State<Signin> with SingleTickerProviderStateMixin {
                 ),
                 const SizedBox(height: 50),
                 TabBar(
+                  labelStyle: TextStyle(fontFamily: "Itim"),
                   controller: tabController,
                   tabs: [
                     Tab(

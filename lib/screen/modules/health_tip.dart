@@ -105,21 +105,33 @@ class _FirstAid_AnsState extends State<FirstAid_Ans> {
        body: Hero(
          tag: "hero-tag",
          child: Stack(
-           children: [Container(
-             height: MediaQuery.of(context).size.height*0.4,
-             width: MediaQuery.of(context).size.width,
-             child: Image(
-               fit: BoxFit.fill,
-               image: AssetImage("assets/d.jpg"),
+           children: [
+             // Background Image
+             Image.network(
+               'https://cdn.pixabay.com/photo/2021/11/21/06/16/female-6813278_640.png', // Replace with your image URL
+               fit: BoxFit.cover,
+               width: double.infinity,
+               height: double.infinity,
              ),
-           ),
-           Positioned(
-             bottom: 10,
-             child: Container(
-               height: MediaQuery.of(context).size.height*0.5,
-               color: Colors.amberAccent,
+             // Curved Container Overlay
+             Positioned.fill(
+               child: Container(
+                 decoration: BoxDecoration(
+                   color: Colors.pink, // Change the color as needed
+                   borderRadius: BorderRadius.vertical(
+                     top: Radius.circular(20.0),
+                   ),
+                 ),
+                 padding: EdgeInsets.all(20.0), // Adjust padding as needed
+                 child: Center(
+                   child: Text(
+                     'Overlay Content', // Replace with your content
+                     style: TextStyle(fontSize: 20.0),
+                   ),
+                 ),
+               ),
              ),
-           ),]
+           ],
          ),
        ),
     );

@@ -268,7 +268,7 @@ class Testing extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Dr. Ishita Tripathi",
+                                  "Dr. Sarah Miller",
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontFamily: "Itim",
@@ -276,7 +276,7 @@ class Testing extends StatelessWidget {
                                       fontWeight: FontWeight.bold),
                                 ),
                                 Text(
-                                  "Mental Patient",
+                                  "Dermatologist",
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 15,
