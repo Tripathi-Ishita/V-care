@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../modules/health_tip.dart';
+import 'dart:math';
 
 class DoctorSpeciality extends StatefulWidget {
   const DoctorSpeciality({super.key});
@@ -53,8 +54,11 @@ class _DoctorSpecialityState extends State<DoctorSpeciality> {
 
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.deepPurple,
+      ),
       body: Container(
-        margin: EdgeInsets.only(top: 100,bottom: 100),
+        margin: EdgeInsets.only(top: 80,bottom: 80),
         child: GridView.builder(
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 3, // Number of columns
@@ -78,7 +82,7 @@ class _DoctorSpecialityState extends State<DoctorSpeciality> {
                     ),
                     child: SvgPicture.string(
                       svgList[index],
-                      color: Colors.redAccent,
+                      color: Color(Random().nextInt(0xFFFFFFFF) | 0xFF000000),
                     ),
                     onPressed: () {},
                   ),

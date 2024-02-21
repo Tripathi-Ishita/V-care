@@ -17,7 +17,6 @@ class _FirstScreenState extends State<FirstScreen> {
         body: GestureDetector(
           onVerticalDragEnd: (details) {
             if (details.primaryVelocity! < 0) {
-
               // Negative velocity indicates an upward swipe
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
@@ -48,7 +47,7 @@ class _FirstScreenState extends State<FirstScreen> {
                         children: [
                           Text(
                             "Feel The "
-                                "Heal",
+                            "Heal",
                             style: TextStyle(
                               color: Colors.white,
                               fontSize: 50,
@@ -75,8 +74,8 @@ class _FirstScreenState extends State<FirstScreen> {
                 right: 0,
                 left: 0,
                 child: Container(
-                  height: MediaQuery.of(context).size.height*.7,
-                  width: MediaQuery.of(context).size.width*.9,
+                  height: MediaQuery.of(context).size.height * .7,
+                  width: MediaQuery.of(context).size.width * .9,
                   child: Image(
                     image: const AssetImage("assets/doc.png"),
                     fit: BoxFit.cover,
@@ -85,6 +84,34 @@ class _FirstScreenState extends State<FirstScreen> {
                   ),
                 ),
               ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Positioned(
+                    bottom: 0,
+                    child: Container(
+                      width: MediaQuery.of(context).size.width * 0.3,
+                      decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.deepPurple,
+                                blurRadius: 12.0,
+                                offset: Offset(3.0, 3.0))
+                          ],
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(80),
+                              topRight: Radius.circular(80)),
+                          color: Colors.white),
+                      child: Text("Swipe Up",
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontFamily: "Itim",
+                            fontSize: 18,
+                            fontWeight: FontWeight.w500,
+                          ),
+                          textAlign: TextAlign.center),
+                      padding: EdgeInsets.all(5),
+                    )),
+              )
             ],
           ),
         ),
@@ -92,5 +119,3 @@ class _FirstScreenState extends State<FirstScreen> {
     );
   }
 }
-
-
